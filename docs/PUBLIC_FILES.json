@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "deployBase": "/codex-everforge/",
+  "note": "Git-normalized content; excludes its own recursive hash. Presentation candidate, desktop release unchanged.",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ASSETS-LICENSE.md",
+      "bytes": 1182,
+      "sha256": "4a7429c2c7777a8a509f821b9270f60c8f023e1ec21eb1a29a58b95ba16dd8ef"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1849,
+      "sha256": "bc7cdcb4194a4fb2a56ce2cf72513e7273e78f0f35e168449f88159d24110c52"
+    },
+    {
+      "path": "FEATURE_STATUS.json",
+      "bytes": 1259,
+      "sha256": "270e4d89635d6b07d8447127be7bd92b5056f6010bf1c6d4253264efc62e230a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "abce9ffd0e72999000a1b5f789994c203bac5f1553910dc2e9d5f763fe029231"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2151,
+      "sha256": "d76b0e6bb81c02e74d8c48f92cb398164733489de2dfe621dd61471a388e589f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 509,
+      "sha256": "364ea9b234aa4a78dd1d8026c9fc0644861b6c8354e861203d7ad480552fd3f7"
+    },
+    {
+      "path": "account.js",
+      "bytes": 4439,
+      "sha256": "9178ec028b47038bf0d877348fc1861765496cae98ed67bdf528e80b9f19adc6"
+    },
+    {
+      "path": "app.js",
+      "bytes": 8013,
+      "sha256": "1003a8c0ca1f3c64dffa339f414f866d7c70a9caef10f9044abc64015883e6ca"
+    },
+    {
+      "path": "assets/feature-previews/collision-art-v8b.png",
+      "bytes": 2821869,
+      "sha256": "a98812d07988e09ac2c0dc0a38bbcc1fa20021541b3dd554ef81ad3bb1f7c21a"
+    },
+    {
+      "path": "assets/fonts/cinzel-0.ttf",
+      "bytes": 6372,
+      "sha256": "5af2592c3847a7f5c491cb8d4cf3bb4ab496a2c178591692148e57e09c78dd16"
+    },
+    {
+      "path": "assets/fonts/cinzel-1.ttf",
+      "bytes": 6392,
+      "sha256": "a0dc6a3d43632b1797b072fe1ab43159bc4d9c9c9167ed9b460c6e67fc3d0b92"
+    },
+    {
+      "path": "assets/fonts/cinzel-OFL.txt",
+      "bytes": 4383,
+      "sha256": "f2b3029aba64c378bf0963b62945eee15e564fe4330b934c8f2eb058282b5e83"
+    },
+    {
+      "path": "assets/fonts/noto-serif-sc-0.ttf",
+      "bytes": 23856,
+      "sha256": "d4f11b281d97971f967259b47a7fd3a8ee1c83640a3e8cc09c8c679b14d830df"
+    },
+    {
+      "path": "assets/fonts/noto-serif-sc-1.ttf",
+      "bytes": 23868,
+      "sha256": "e75479cada51bc8f92ebeb0d13e775a4cbfb7089767160f91e0b2f6776675cbf"
+    },
+    {
+      "path": "assets/fonts/notoserifsc-OFL.txt",
+      "bytes": 4350,
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "path": "assets/maker-original.png",
+      "bytes": 2735911,
+      "sha256": "a673feb69731ebe9437c82a3f1ebb1bf8a23bfd2fb6dfe4788a256ec8952ccd3"
+    },
+    {
+      "path": "boot-loader.js",
+      "bytes": 2775,
+      "sha256": "940c136ca81b900427b1089e6a11df85e4ea764553cfc75fd8531564a485f0a7"
+    },
+    {
+      "path": "download-config.js",
+      "bytes": 118,
+      "sha256": "805d5ac1fafb20e86757b886d30ffa9cf97868bcc8e5c0aac44a1b42b4564b17"
+    },
+    {
+      "path": "fallback.css",
+      "bytes": 5079,
+      "sha256": "a251bc31932162deb90cb2c876ae3a386fad7510a594225188bf53696f5de581"
+    },
+    {
+      "path": "feature-previews.css",
+      "bytes": 4094,
+      "sha256": "47ea1c42f18f40c5be4a4057ffd958645bf3b33f3b4fdddd85ca8b40fab68ae0"
+    },
+    {
+      "path": "feature-previews.js",
+      "bytes": 5810,
+      "sha256": "292df8d21f4b5c88b087d55742a65b8c4f2154e30b59a0c30ed55e273b69c082"
+    },
+    {
+      "path": "fonts.css",
+      "bytes": 685,
+      "sha256": "ceee07ff8746755c78122fcb84018f32234787f26581c52d4145669ceb43cdb5"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15376,
+      "sha256": "ee6ef4432a84d50fe288ebdec73edda9c1f148a9f9a55f2ef1832c8e8b189e3a"
+    },
+    {
+      "path": "install-prompt.js",
+      "bytes": 1997,
+      "sha256": "74508aa4a226ba2aa96ba6bccf243096ccff4f95251879edeed42c13c3938a65"
+    },
+    {
+      "path": "profiles.js",
+      "bytes": 1051,
+      "sha256": "d98076e8c93cbbd0b8a8175208fe32bc6648e286aa3e7d9c9c0f8e2f3a9a7067"
+    },
+    {
+      "path": "public-scene.css",
+      "bytes": 3091,
+      "sha256": "29992478091b89d443bc314335feeca9355eb4ef827daa8261103557908fb606"
+    },
+    {
+      "path": "screenshots/menu-a.png",
+      "bytes": 11751,
+      "sha256": "eb2d9c3fbae3d61cb43a0c98c304a00ba08a805f7987336962873eecd62cfb8d"
+    },
+    {
+      "path": "screenshots/menu-b.png",
+      "bytes": 11773,
+      "sha256": "ff001338b0fdcd8f76a7fa7a2a5801f768c04d43e170f370c537432e2f820a00"
+    },
+    {
+      "path": "screenshots/menu-c.png",
+      "bytes": 11836,
+      "sha256": "ca54088ba886c117d0a11e4d393f87d939620bce0ac9de3bc1f391770c73c645"
+    },
+    {
+      "path": "v4.css",
+      "bytes": 10333,
+      "sha256": "d2ca0f1504e99baaff357e5b038c889693fa35da468a478b1532db7cd26f9b88"
+    }
+  ]
+}

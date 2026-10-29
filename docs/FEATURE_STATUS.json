@@ -1,0 +1,37 @@
+{
+  "renderer": "project-authored CSS-3D compatibility scene; no WebGL dependency",
+  "workingInteractions": [
+    "continuous front/back rotation",
+    "pointer inertia",
+    "flip buttons and keyboard",
+    "reduce motion",
+    "feature popovers",
+    "fictional identity switching and failure/empty examples",
+    "copy installation prompt with manual fallback",
+    "real Release/install/source links"
+  ],
+  "websiteDemoOnly": [
+    "identity and quota values",
+    "account switching",
+    "reset message illustration",
+    "community collision artwork"
+  ],
+  "notConnected": [
+    "OAuth",
+    "real account registration",
+    "live desktop quota",
+    "notification backend",
+    "community matchmaking",
+    "cloud XP"
+  ],
+  "desktop": "Windows 11 x64 N54.5 pre-release; public source checks not official X realtime; first notification opt-in; unsigned; known recovery gaps",
+  "excludedAssets": [
+    "ThreeUI modules/shaders/models/textures",
+    "historical desktop screenshots",
+    "Tibo post screenshot",
+    "source bundles",
+    "reference artwork",
+    "archives/evidence/private data"
+  ],
+  "visualVerification": "pending approved HTTPS browser preview; local file fixture navigation blocked by browser security; no screenshot claimed"
+}

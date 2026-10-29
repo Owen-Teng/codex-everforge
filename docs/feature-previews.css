@@ -1,0 +1,32 @@
+/* Text stays in the introduction; images float over the scene, without reflow. */
+.feature-lead{max-width:1020px;pointer-events:auto}
+.feature-phrase{white-space:nowrap}
+.feature-ending{white-space:nowrap}
+.feature-lead .feature-trigger{display:inline;padding:4px 0;min-height:0;border:0;border-radius:1px;background:transparent;color:#d1c1a2;font:inherit;line-height:inherit;white-space:nowrap;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#867a60;text-underline-offset:6px;text-decoration-thickness:1px;transition:color .16s ease-out}
+.feature-lead .feature-trigger:hover,.feature-lead .feature-trigger[aria-expanded=true]{color:#f0d7a5;background:transparent;text-decoration-style:solid;text-decoration-color:currentColor}
+.feature-lead .feature-trigger:focus-visible{outline:2px solid #e8c98b;outline-offset:4px;border-radius:2px}
+.feature-previews{pointer-events:auto}
+.feature-preview{--preview-image-height:380px;position:fixed;z-index:12;left:16px;top:190px;width:354px;max-width:calc(100vw - 32px);max-height:calc(100svh - 210px);padding:6px 16px 14px;text-align:left;background:#14222d;color:#eadfc9;border-radius:12px;box-shadow:0 18px 48px #0009;overflow:auto;overscroll-behavior:contain;scrollbar-color:#8e805f #14222d;scrollbar-width:thin;animation:preview-arrive .18s cubic-bezier(.16,1,.3,1) both}
+.feature-preview.preview-wide{width:640px;--preview-image-height:330px}
+.feature-preview.preview-battle{width:640px;--preview-image-height:240px}
+.battle-content{display:grid;grid-template-columns:3fr 2fr;gap:20px;align-items:center}
+.battle-copy{min-width:0;color:#d2dce0;font-size:13px;line-height:1.85}
+.battle-copy p{margin:0}.battle-copy p+p{margin-top:12px}
+.battle-copy .battle-note{font-size:12px;line-height:1.7;color:#b3c3cd}
+.preview-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 8px;min-height:44px}
+.preview-heading h2{font-size:15px;font-weight:500;line-height:1.6;margin:0;color:#e8d5b2}
+.feature-preview .preview-close{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;padding:0;min-height:44px;margin-right:-10px;background:transparent;border:0;border-radius:6px;color:#b9c6cc}
+.feature-preview .preview-close:hover{background:#243642;color:#fff1d7}
+.preview-close svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round}
+.feature-preview figure{margin:0;min-width:0;text-align:center}
+.feature-preview img{display:block;max-width:100%;height:auto;max-height:var(--preview-image-height);width:auto;margin:0 auto;object-fit:contain;border-radius:4px;background:#0e1b25;color:#c5d2d8;font-size:13px}
+.feature-preview figcaption{font-size:12px;line-height:1.7;color:#b3c3cd;margin-top:10px}
+.preview-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.preview-pair figcaption{margin:0 0 10px;text-align:left;color:#d0d9dc}
+.preview-pair a{display:inline-flex;align-items:center;min-height:36px;font-size:12px;color:#e2c690;text-decoration:underline;text-underline-offset:4px;margin-top:5px}
+.preview-note{font-size:12px;line-height:1.7;color:#b3c3cd;margin:12px 0 0;text-wrap:pretty}
+.preview-image-error{font-size:13px;color:#e1c896;padding:24px 10px;text-align:center;margin:0}
+@keyframes preview-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.feature-lead{line-height:2.6}.feature-lead .feature-trigger{padding:8px 0}.feature-preview{width:min(354px,calc(100vw - 24px));max-width:calc(100vw - 24px);padding:6px 13px 13px}.feature-preview.preview-wide{width:calc(100vw - 24px)}.preview-pair{gap:12px}.preview-heading h2{font-size:14px}.preview-pair figcaption{font-size:11px}.preview-note{font-size:12px}}
+@media(max-width:520px){.battle-content{grid-template-columns:1fr;gap:12px}.feature-preview.preview-battle{--preview-image-height:160px}.battle-copy{font-size:12px;line-height:1.75}.battle-copy p+p{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){.feature-preview{animation:none}.feature-lead .feature-trigger{transition:none}}

@@ -1,0 +1,39 @@
+// Project-authored CSS-3D compatibility renderer. No ThreeUI code or assets.
+import { profiles } from './profiles.js';
+const $=id=>document.getElementById(id),stage=$('stage');
+let profile=profiles.guest,angle=-.11,speed=.22,spinning=true,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,paused=false,focused=false,drag=null,target=null,last=0,raf=0;
+spinning=!reduced;
+const scene=document.createElement('div');scene.className='public-scene';
+scene.innerHTML=`<svg class="sword-scene" viewBox="0 0 1200 700" aria-hidden="true"><defs><linearGradient id="steel" x2="1"><stop stop-color="#20313a"/><stop offset=".48" stop-color="#ccbb94"/><stop offset=".52" stop-color="#43525a"/><stop offset="1" stop-color="#15202b"/></linearGradient><radialGradient id="candle"><stop stop-color="#e8b15a" stop-opacity=".16"/><stop offset="1" stop-color="#060b11" stop-opacity="0"/></radialGradient></defs><path d="M80 650V220Q300 -50 520 220V650M130 650V245Q300 5 470 245V650" fill="none" stroke="#8b7958" stroke-opacity=".12" stroke-width="4"/><ellipse cx="300" cy="620" rx="260" ry="90" fill="url(#candle)"/><path d="M0 655H1200M0 680H1200" stroke="#9d866b" stroke-opacity=".1"/><path d="M200 600 240 560H385L425 600 420 640H205Z" fill="#15202a" stroke="#3a403b"/><g transform="translate(305 290) rotate(-12)"><path d="M-11 30H11L8 270 0 305-8 270Z" fill="url(#steel)" stroke="#8c8b79"/><path d="M-70 20Q0 -6 70 20L65 32Q0 15-65 32Z" fill="#9f875d"/><path d="M-7 -70H7V20H-7Z" fill="#342b25" stroke="#ad9465"/><circle cy="-80" r="13" fill="#a18b62"/></g><g fill="#b3a086"><path d="M185 570h13v40h-13zM405 565h12v45h-12zM150 590h11v30h-11zM440 590h11v30h-11z"/></g><g fill="#ffd192"><path d="M191 545q-12 18 0 23 12-5 0-23M411 540q-12 18 0 23 12-5 0-23M155 568q-9 16 0 20 9-4 0-20M445 568q-9 16 0 20 9-4 0-20"/></g></svg>`;
+const card=document.createElement('div');card.className='public-card';
+card.innerHTML='<div class="card-front"><img src="assets/maker-original.png" alt="原创造物师角色，托起金色星球"><div class="front-caption"><h2></h2><p></p><small>网页示例 · 非真实账户</small></div></div><div class="card-reverse"></div>';
+const back=$('card-back-template').content.firstElementChild.cloneNode(true);card.querySelector('.card-reverse').append(back);scene.append(card);stage.append(scene);
+function text(id,value){const e=$(id);if(e)e.textContent=value;}
+export function setProfile(p){profile=p;card.querySelector('h2').textContent=p.username;card.querySelector('.front-caption p').textContent=p.rank+' / '+p.rankEnglish+' · '+p.level;for(const[k,v]of Object.entries({'profile-username':p.username,'profile-rank':p.rank,'profile-rank-english':'/ '+p.rankEnglish,'profile-level':'阶级 '+p.level,'profile-work':p.work,'profile-work-description':p.workDescription,'profile-bio':p.bio,'quota-primary':p.primary,'quota-weekly':p.weekly+'%','primary-reset':p.reset,'weekly-reset':p.weeklyReset}))text(k,v);$('primary-bar').style.width=p.primary+'%';$('primary-meter').setAttribute('aria-valuenow',p.primary);}
+export function setCardStatus(state){$('card-status').hidden=state==='ready';card.hidden=state!=='ready';text('card-status-title',state==='syncing'?'切换示例身份…':state==='error'?'示例同步失败':'示例尚无卡片');text('card-status-description','仅网页交互预演，未连接真实账号。');}
+export function setInterfacePaused(v){paused=v;wake();}
+function size(){const r=stage.getBoundingClientRect();const h=Math.max(160,Math.min(540,r.height*.88,r.width<600?r.width*1.08:r.width*.58));card.style.width=h/1.5+'px';card.style.height=h+'px';back.style.transform='scale('+h/630+')';}
+function face(){return Math.cos(angle)<0?'back':'front';}
+function draw(){card.style.transform='translate(-50%,-50%) rotateX(-2deg) rotateY('+angle+'rad)';const b=face()==='back';card.querySelector('.card-front').setAttribute('aria-hidden',b);card.querySelector('.card-reverse').setAttribute('aria-hidden',!b);$('front-button').setAttribute('aria-pressed',!b);$('back-button').setAttribute('aria-pressed',b);}
+function frame(t){raf=0;const dt=Math.min(.04,(t-last)/1000||.016);last=t;if(!paused&&!focused&&!document.hidden){if(target!==null){const d=target-angle;angle+=d*Math.min(1,dt*8);if(Math.abs(d)<.001){angle=target;target=null;}}else if(!drag&&!reduced&&spinning){speed+=(.22-speed)*(1-Math.exp(-1.35*dt));angle+=speed*dt;}}draw();if(!document.hidden&&!paused&&!focused&&(target!==null||(!reduced&&spinning)))wake();}
+function wake(){if(!raf){last=performance.now();raf=requestAnimationFrame(frame);}}
+function flip(side){spinning=false;$('spin-button').textContent='继续旋转';const base=Math.round(angle/(Math.PI*2))*Math.PI*2;target=base+(side==='back'?Math.PI:0);if(reduced){angle=target;target=null;draw();}else wake();}
+$('front-button').onclick=()=>flip('front');$('back-button').onclick=()=>flip('back');
+$('spin-button').onclick=()=>{spinning=!spinning;target=null;$('spin-button').textContent=spinning?'暂停旋转':'继续旋转';wake();};
+function motion(v){reduced=v;spinning=!v;target=null;if(v){angle=0;speed=0;draw();}$('motion-button').setAttribute('aria-pressed',v);$('spin-button').textContent=spinning?'暂停旋转':'继续旋转';wake();}
+$('motion-button').onclick=()=>motion(!reduced);matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>motion(e.matches));
+stage.addEventListener('focus',()=>{focused=true;});stage.addEventListener('blur',()=>{focused=false;wake();});
+stage.addEventListener('pointerdown',e=>{if(e.target.closest('button,a'))return;drag={x:e.clientX,t:performance.now(),moved:0};target=null;stage.setPointerCapture(e.pointerId);});
+stage.addEventListener('pointermove',e=>{if(!drag)return;const now=performance.now(),dx=e.clientX-drag.x;drag.moved+=Math.abs(dx);if(!reduced){angle+=dx*.012;speed=Math.max(-9,Math.min(9,dx*.012/Math.max(.008,(now-drag.t)/1000)));}drag.x=e.clientX;drag.t=now;draw();});
+function release(e){if(!drag)return;const moved=drag.moved;drag=null;if(stage.hasPointerCapture(e.pointerId))stage.releasePointerCapture(e.pointerId);if(moved<5)flip(face()==='front'?'back':'front');else{spinning=!reduced;focused=false;$('spin-button').textContent=spinning?'暂停旋转':'继续旋转';wake();}}
+stage.addEventListener('pointerup',release);stage.addEventListener('pointercancel',()=>{drag=null;wake();});
+document.addEventListener('keydown',e=>{if($('account-dialog').open||e.target.matches('button,select,summary,a'))return;if(e.key==='f'||e.key==='F')flip(face()==='front'?'back':'front');if(e.key==='Escape')flip('front');if(e.code==='Space'&&e.target===stage){e.preventDefault();focused=false;$('spin-button').click();}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&raf){cancelAnimationFrame(raf);raf=0;}else wake();});
+new ResizeObserver(size).observe(stage);
+document.querySelectorAll('[data-scenario]').forEach(b=>b.onclick=()=>{const offline=b.dataset.scenario==='offline',alert=b.dataset.scenario==='alert';text('quota-primary',offline?'—':profile.primary);text('quota-weekly',offline?'—':profile.weekly+'%');text('scenario-note','仅示例情景，不连接账户或通知。');text('notice-title',alert?'模拟公开消息提醒':'有公开消息时，提醒你');text('notice-description','网页预演；公开公告与本机额度恢复分别确认。');text('primary-reset',offline?'—':profile.reset);});
+window.__cardDemo={get state(){return{ready:true,side:face(),rotation:angle,angularVelocity:speed,reduced,spinning,renderer:'project-css-3d',backend:false};}};
+setProfile(profile);size();draw();
+const portrait=card.querySelector('img');function complete(){window.__everforgeBoot?.complete();wake();}
+if(portrait.complete&&portrait.naturalWidth)complete();else{portrait.onload=complete;portrait.onerror=()=>{card.querySelector('.front-caption small').textContent='角色图片加载失败，仍可翻面';complete();};}
+$('fallback').hidden=true;
+document.fonts.ready.then(size);window.__everforgeBoot?.progress(90);

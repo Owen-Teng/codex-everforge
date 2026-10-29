@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e18">
+  <title>Codex Everforge · Windows 额度工具与官网预览</title>
+  <meta name="description" content="在 Windows 任务栏查看 Codex 额度，接收公开重置消息。下载体验版，探索原创角色卡交互。">
+  <style>
+    html.is-booting{background:#060b11}html.is-booting body>:not(#boot-loader):not(noscript){visibility:hidden!important}
+    #boot-loader{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;background:#060b11;color:#e2cca0;font-family:'Segoe UI','Microsoft YaHei',sans-serif}
+    #boot-loader[hidden]{display:none}.boot-content{width:min(380px,calc(100vw - 48px));text-align:center}
+    #boot-label{font-size:17px;line-height:1.8;font-weight:400;letter-spacing:.04em;margin:0 0 23px}
+    .boot-track{height:4px;border-radius:3px;background:#23313a;overflow:hidden}.boot-fill{display:block;height:100%;transform:scaleX(0);transform-origin:left;background:#cfb57e;transition:transform .22s ease-out}
+    #boot-percent{font-size:12px;font-variant-numeric:tabular-nums;color:#aeb7b7;margin:12px 0 0}
+    #boot-note{font-size:13px;line-height:1.7;color:#aebbc3;margin:20px 0 0}#boot-note:empty{display:none}
+    #boot-retry{margin-top:18px;padding:10px 22px;min-height:44px;background:#202820;border:1px solid #9a8359;border-radius:5px;color:#e7d4a8;font:14px 'Segoe UI','Microsoft YaHei',sans-serif;cursor:pointer}#boot-retry:focus-visible{outline:2px solid #e7c98e;outline-offset:4px}
+    @media(prefers-reduced-motion:reduce){.boot-fill{transition:none}}
+  </style>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="v4.css">
+  <link rel="stylesheet" href="feature-previews.css">
+  <link rel="stylesheet" href="public-scene.css">
+</head>
+<body>
+  <div id="boot-loader" aria-busy="true">
+    <div class="boot-content">
+      <p id="boot-label">正在生成 Codex 造物角色卡.....</p>
+      <div class="boot-track" id="boot-progress" role="progressbar" aria-labelledby="boot-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="boot-fill" id="boot-fill"></span></div>
+      <p id="boot-percent" aria-hidden="true">0%</p>
+      <p id="boot-note" role="status" aria-live="polite"></p>
+      <button type="button" id="boot-retry" hidden>重新加载</button><p><a href="https://github.com/Owen-Teng/codex-everforge/releases/tag/v0.8.0-beta.1">直接下载 Windows 体验版</a></p>
+    </div>
+  </div>
+  <script src="boot-loader.js"></script>
+  <noscript><style>#boot-loader{display:none!important}html.is-booting header,html.is-booting main{visibility:visible!important}.fallback[hidden]{display:block!important}</style><p>JavaScript 未启用，请直接<a href="https://github.com/Owen-Teng/codex-everforge/releases/tag/v0.8.0-beta.1">下载 Windows 体验版</a>。</p><style>#boot-label:after{content:'请开启 JavaScript 后重新加载。';display:block;font-size:13px;color:#aebbc3}.boot-track,#boot-percent{display:none}</style></noscript>
+  <a class="skip" href="#stage">跳到角色卡体验</a>
+  <header class="site-header" data-boot-inert>
+    <a class="wordmark" href="./" aria-label="Codex Everforge 首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 2 12 7v14l-12 7L4 23V9Z M16 2v28M4 9l12 7 12-7M4 23l12-7 12 7"/></svg><span>CODEX <b>EVERFORGE</b></span></a>
+    <div class="header-actions"><button id="account-button" class="account-button" aria-haspopup="dialog" type="button">身份预演</button>
+      <details class="view-menu" id="view-menu"><summary aria-label="显示选项" title="显示选项">⋯</summary><div class="view-panel">
+        <p class="menu-label">卡片视角</p><div class="side-switch"><button id="front-button" type="button" aria-pressed="true">人物正面</button><button id="back-button" type="button" aria-pressed="false">产品背面</button></div>
+        <button id="spin-button" type="button" aria-pressed="true">暂停旋转</button><button id="motion-button" type="button" aria-pressed="false">减少动态</button>
+        <p class="gesture-hint">拖拽加速，松手后缓缓回落。<br>聚焦场景：空格暂停 / 继续，F 翻面。</p>
+        <details class="scenarios"><summary>卡背情景 · 示例</summary><div class="scenario-row"><button type="button" data-scenario="normal" aria-pressed="true">日常状态</button><button type="button" data-scenario="alert" aria-pressed="false">收到重置提醒</button><button type="button" data-scenario="offline" aria-pressed="false">额度暂不可读</button></div><p id="scenario-note">未连接真实账户。</p></details>
+      </div></details>
+    </div>
+  </header>
+  <main id="experience" data-boot-inert>
+    <section class="intro" aria-labelledby="headline">
+      <h1 id="headline">看清 Codex 额度，专注你的创造。</h1>
+      <p class="lead feature-lead"><span class="feature-phrase"><button type="button" class="feature-trigger" id="feature-desktop" aria-expanded="false" aria-controls="preview-desktop">桌面额度监控</button>、</span><span class="feature-phrase"><button type="button" class="feature-trigger" id="feature-reminder" aria-expanded="false" aria-controls="preview-reminder">公开重置消息</button>和</span><button type="button" class="feature-trigger" id="feature-community" aria-expanded="false" aria-controls="preview-community">角色卡与社区构想</button><span class="feature-ending">，让投入与作品都被看见。</span></p>
+      <div class="feature-previews">
+        <section id="preview-desktop" class="feature-preview" role="region" aria-labelledby="preview-desktop-title" hidden>
+          <div class="preview-heading"><h2 id="preview-desktop-title">额度，一眼可见</h2><button type="button" class="preview-close" aria-label="关闭桌面额度预览"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+          <figure><div class="desktop-demo"><small>桌面功能示意 · 非实拍</small><h3>Codex 剩余额度</h3><strong>72<span>%</span></strong><p>5 小时窗口 · 示例读数</p><progress value="72" max="100">72%</progress><p>每周额度 38% · 示例</p></div><figcaption>真实桌面版读取本机额度；本页不读取或上传额度。</figcaption></figure>
+        </section>
+        <section id="preview-reminder" class="feature-preview preview-wide" role="region" aria-labelledby="preview-reminder-title" hidden>
+          <div class="preview-heading"><h2 id="preview-reminder-title">从一条消息，到桌面提醒</h2><button type="button" class="preview-close" aria-label="关闭重置提醒预览"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+          <div class="preview-pair"><div class="message-demo"><h3>公开来源</h3><p>Codex Resets 公开记录</p><p>正常每 5 分钟检查</p><a href="https://codex-resets.com/">查看来源 ↗</a></div><div class="message-demo"><h3>桌面提醒</h3><p>首次提醒默认关闭，由你选择开启。</p><p>网页示意 · 未接通知后台</p></div></div><p class="preview-note">第三方采集可能延迟；公开公告不等于本机额度到账，不保证即时或全部送达。</p>
+        </section>
+        <section id="preview-community" class="feature-preview preview-battle" role="region" aria-labelledby="preview-community-title" hidden>
+          <div class="preview-heading"><h2 id="preview-community-title">角色卡互动 · 社区构想</h2><button type="button" class="preview-close" aria-label="关闭卡片交互预览"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+          <div class="battle-content">
+            <figure><img data-src="assets/feature-previews/collision-art-v8b.png" width="1536" height="1024" alt="双卡交锋主题插画：左侧造物师卡完整，右侧戴眼镜、持火把的女角色正面卡破碎，人物画面与金色卡框沿裂缝分开，碎片悬在空中。"></figure>
+            <div class="battle-copy"><p>构想：隐藏同周期使用量，撞牌揭晓高低。</p><p>盲比、社区匹配和真实成长尚未开放；此图为主题插画。</p><p class="battle-note">碎裂是卡面效果，人物资料与作品会保留。</p></div>
+          </div>
+        </section>
+      </div>
+      <p class="public-state">官网兼容预览 · 卡片使用示例数据 · 账号与社区尚未上线</p><div class="install-prompt" aria-label="复制给 AI 助手的安装指令">
+        <p id="install-prompt-text" tabindex="0">请按安装说明为本机下载安装并配置 Codex Everforge，校验安装包后执行安装，完成后检查运行状态。</p>
+        <button type="button" id="copy-prompt" aria-label="复制安装指令" aria-describedby="copy-hint">
+          <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+          <span id="copy-label">Copy</span>
+        </button>
+      </div>
+      <p id="copy-hint" class="copy-hint">复制给 Codex 安装 Windows 11 x64 体验版 · v0.8.0-beta.1 · 未签名</p>
+      <p class="public-links"><a href="https://github.com/Owen-Teng/codex-everforge/releases/tag/v0.8.0-beta.1">下载 Windows 体验版</a> · <a href="https://github.com/Owen-Teng/codex-everforge">MIT 源码</a> · <a href="CREDITS.md">素材与许可</a></p><span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+    </section>
+    <section class="card-area" aria-label="造物者角色卡与剑冢">
+      <div class="stage" id="stage" tabindex="0" aria-label="自动旋转的角色卡。横向拖动加速，松手后惯性减速。聚焦时暂停，空格继续或暂停，F 翻面。">
+        <div class="canvas-root" id="canvas-root"></div><div class="css-root" id="css-root"></div>
+        <div class="loading" id="loading" role="status" hidden></div>
+        <div class="fallback" id="fallback"><img src="assets/maker-original.png" alt="深蓝金色长袍的造物师，双手托起金色星球"><p id="fallback-name">星野 · 造物师 / MAKER · IV</p></div>
+        <div class="card-status" id="card-status" hidden><h2 id="card-status-title"></h2><p id="card-status-description"></p><div><button id="card-retry" type="button">重新同步</button><button id="card-reset" type="button">返回访客体验</button></div></div>
+      </div>
+    </section>
+  </main>
+  <dialog id="account-dialog" aria-labelledby="account-title" aria-describedby="auth-disclaimer">
+    <button class="dialog-close" id="close-account" type="button" aria-label="关闭登录窗口">×</button><h2 id="account-title">让卡片成为你的身份</h2><p id="session-info">选择一种方式，开始记录你的创造。</p>
+    <div class="provider-options" aria-label="登录方式"><button type="button" data-provider="Google">Google · 未接通</button><button type="button" data-provider="GitHub">GitHub · 未接通</button><button type="button" data-provider="邮箱">邮箱 · 未接通</button></div>
+    <p class="auth-disclaimer" id="auth-disclaimer">仅体验示例身份切换。真实登录尚未接通，不收集密码。</p>
+    <div class="demo-accounts"><h3>先用示例身份体验</h3><button type="button" data-profile="lin"><span>林舟</span><small>造物师 · IV　流光笔记</small></button><button type="button" data-profile="qiao"><span>乔安的微光工坊</span><small>塑形师 · III　微光日历</small></button></div>
+    <p id="account-status" role="status">示例资料只在本页暂存，刷新后恢复访客。</p><button id="dialog-retry" type="button" hidden>重新同步示例卡</button>
+    <details class="failure-options"><summary>查看异常状态</summary><label for="sync-mode">下次同步的演示情景</label><select id="sync-mode"><option value="ready">正常同步</option><option value="error">同步失败</option><option value="empty">尚无卡片</option></select></details>
+    <button id="logout-button" type="button" hidden>退出示例账户</button>
+  </dialog>
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+  <template id="card-back-template">
+    <article class="card-back" aria-label="造物者身份与额度卡">
+      <div class="back-topline"><span>CODEX EVERFORGE</span><span>示例身份</span></div>
+      <header class="identity"><div class="identity-seal" aria-hidden="true">✦</div><div><span class="field-label">用户名</span><h2 id="profile-username">星野</h2><p><span class="rank-gem" aria-hidden="true">◇</span> <span id="profile-rank">造物师</span> <span class="english-rank" id="profile-rank-english">/ MAKER</span></p></div><span class="level-tag" id="profile-level">阶级 IV</span></header>
+      <div class="profile-work"><strong id="profile-work">星轨手记</strong><p id="profile-work-description">把散落的想法整理成下一步</p><p id="profile-bio">把灵感做成日常可用的小工具。</p></div><div class="engraved-rule" aria-hidden="true"><span>✧</span></div>
+      <section class="quota-section" aria-labelledby="quota-title"><div class="section-heading"><h3 id="quota-title">Codex 剩余额度</h3><span class="reading-status" id="reading-status">示例读数</span></div><div class="quota-primary"><div><span class="field-label">5 小时窗口</span><p class="quota-number"><strong id="quota-primary">72</strong><span id="quota-unit">%</span></p></div><div class="reset-meta"><span>窗口重置</span><strong id="primary-reset">21:40</strong><small>示例时间</small></div></div><div class="quota-track" role="meter" aria-label="5小时窗口剩余额度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72" id="primary-meter"><i id="primary-bar"></i></div><div class="weekly-row"><span>每周额度</span><strong id="quota-weekly">38%</strong><span class="weekly-reset" id="weekly-reset">周二 09:00 重置</span></div><p class="reading-note" id="reading-note">额度用于安排工作，不代表创作质量。</p></section>
+      <section class="reminder-section" aria-labelledby="reminder-title"><div class="section-heading"><h3 id="reminder-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>公开重置消息</h3><span class="notice-badge" id="notice-badge">待新消息</span></div><div class="notice-body" id="notice-body"><p class="notice-title" id="notice-title">有重置消息时，提醒你</p><p id="notice-description">关注额外重置消息，减少来回查看。</p></div><p class="notice-source" id="notice-source">公开消息提醒与本机额度分别确认</p></section>
+      <div class="back-bottom"><span>人物、成长与创造，都属于你。</span><span>DEMO</span></div>
+    </article>
+  </template>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="account.js"></script>
+  <script type="module" src="install-prompt.js"></script>
+  <script type="module" src="feature-previews.js"></script>
+</body>
+</html>

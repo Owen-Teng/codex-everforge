@@ -23,7 +23,7 @@
     "reference artwork",
     "archives/evidence/private data"
   ],
-  "visualVerification": "Limited HTTPS browser review at 1280x720 and 390x844. Initial download and feature overlays visible. Focused F-flips in both directions and spin-button ARIA confirmed after runtime fix a7a4071. Replacement-scene branding is not accepted as final.",
+  "visualVerification": "Limited HTTPS browser review at 1280x720 desktop and 375x829 narrow capture (390x844 requested; exact DOM viewport not verified). Initial download and feature overlays visible. Focused F-flips in both directions and spin-button ARIA confirmed after runtime fix a7a4071. Replacement-scene branding is not accepted as final.",
   "implementedInteractions": [
     "continuous front/back rotation",
     "pointer inertia",

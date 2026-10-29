@@ -20,8 +20,8 @@
     },
     {
       "path": "FEATURE_STATUS.json",
-      "bytes": 1689,
-      "sha256": "ac94376d00195f69a32ce7b404984a5dd6d9268f35d1aa5d1545cbe94649c85f"
+      "bytes": 1765,
+      "sha256": "4b5c45e3d34e541e52d51c5d6723cbfd0429282d093842412587c90a760988a7"
     },
     {
       "path": "LICENSE",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2788,
-      "sha256": "7be110c3633331aee5feb3e6611333b100475c346b132aee5612154d7b78a2fe"
+      "bytes": 2871,
+      "sha256": "23a73c398e9263f621562856d800cef2adadef77bc7b4a1c0dc3c26d6b9e3551"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",

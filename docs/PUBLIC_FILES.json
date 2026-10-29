@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "deployBase": "/codex-everforge/",
-  "note": "Git-normalized content; excludes its own recursive hash. Presentation candidate, desktop release unchanged.",
+  "note": "Git-normalized content, excluding this manifest. Website presentation candidate; desktop release unchanged.",
   "files": [
     {
       "path": ".nojekyll",
@@ -127,6 +127,21 @@
       "path": "install-prompt.js",
       "bytes": 1997,
       "sha256": "74508aa4a226ba2aa96ba6bccf243096ccff4f95251879edeed42c13c3938a65"
+    },
+    {
+      "path": "media/feature-card.jpg",
+      "bytes": 77386,
+      "sha256": "dbb89104d1c64d7c8da4d7b855d0fa37408b79b63863fc75346b53c88c0b4ac1"
+    },
+    {
+      "path": "media/feature-reset.jpg",
+      "bytes": 52411,
+      "sha256": "c55437c352987812cea542aab3dc93108181ceef3c6faa6ea433d6f91bacf6bc"
+    },
+    {
+      "path": "media/website-overview.jpg",
+      "bytes": 61418,
+      "sha256": "9aade5007e783530904157e38c7c1273fa0b76a86b0d9e98a65640ce37e025d0"
     },
     {
       "path": "profiles.js",

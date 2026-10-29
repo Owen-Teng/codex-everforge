@@ -11,6 +11,23 @@ Windows 11 x64 · v0.8.0-beta.1 · 未签名预发布版 · 独立社区项目�
 
 > 官网是可操作的展示候选，使用自有场景与示例数据；不是账户后台或联网社区。
 
+[![Codex Everforge 官网兼容预览，示例角色卡与下载入口](docs/media/website-overview.jpg)](https://owen-teng.github.io/codex-everforge/)
+
+*线上官网实拍，使用示例角色与数据。点击进入交互预览；不是安装后桌面实机截图。*
+
+<details>
+<summary>查看角色卡、消息说明与原生菜单</summary>
+
+| 网页角色卡示例 | 网页公开消息功能说明 |
+| --- | --- |
+| ![网页示例角色卡](docs/media/feature-card.jpg) | ![网页消息功能说明](docs/media/feature-reset.jpg) |
+
+下面是 Windows 原生菜单的隔离渲染检查，展示已提供的深蓝金色主题；不是安装后实机截图。
+
+![Windows 原生菜单隔离渲染](docs/screenshots/menu-b.png)
+
+</details>
+
 ## 把额度留在视线里
 
 反复打开设置查额度，会打断手头的工作。Everforge把图标和数字放在任务栏，详细信息放进点击即开的浮窗。公开重置消息和本机额度变化分别展示：看到公告，不等于你的账号额度已经恢复。

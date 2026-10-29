@@ -11,6 +11,23 @@ Windows 11 x64 · v0.8.0-beta.1 · Unsigned pre-release · Independent project, 
 
 > Interactive presentation candidate with a project-authored scene and sample data. Accounts and online community services are not live.
 
+[![Codex Everforge website compatibility preview, with sample data](docs/media/website-overview.jpg)](https://owen-teng.github.io/codex-everforge/)
+
+*Captured from the live website. Characters and numbers are examples; this is not an installed desktop screenshot.*
+
+<details>
+<summary>Card, reset-message overview, and native menu</summary>
+
+| Website sample card | Website reset-message overview |
+| --- | --- |
+| ![Website sample card](docs/media/feature-card.jpg) | ![Reset-message overview](docs/media/feature-reset.jpg) |
+
+The Windows native menu below is an isolated rendering check of the shipped navy/gold theme, not an installed desktop screenshot.
+
+![Isolated Windows native menu render](docs/screenshots/menu-b.png)
+
+</details>
+
 ## Keep quota in view
 
 Checking quota should take a glance. Everforge puts an icon and a number in the taskbar, with a compact panel for the details. Public reset messages stay separate from changes in your own quota: a public announcement does not mean your account has already recovered.

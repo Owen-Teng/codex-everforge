@@ -20,8 +20,8 @@
     },
     {
       "path": "FEATURE_STATUS.json",
-      "bytes": 1259,
-      "sha256": "270e4d89635d6b07d8447127be7bd92b5056f6010bf1c6d4253264efc62e230a"
+      "bytes": 1407,
+      "sha256": "ee48fc714c0b0b214c4572d6eeb495480d7081c5a2f45106b2520f6d41c641c2"
     },
     {
       "path": "LICENSE",
@@ -45,8 +45,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 8013,
-      "sha256": "1003a8c0ca1f3c64dffa339f414f866d7c70a9caef10f9044abc64015883e6ca"
+      "bytes": 8127,
+      "sha256": "370583e2cc38a4b19562a0c2bce94b393fce723cf227fdeb886a55e6c3aafcd6"
     },
     {
       "path": "assets/feature-previews/collision-art-v8b.png",

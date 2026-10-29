@@ -33,5 +33,5 @@
     "reference artwork",
     "archives/evidence/private data"
   ],
-  "visualVerification": "pending approved HTTPS browser preview; local file fixture navigation blocked by browser security; no screenshot claimed"
+  "visualVerification": "Actual HTTPS screenshots at 1280x720 and 390x844. Feature popovers and initial download access observed. Keyboard focus/flip bug reproduced and minimum patch now supplied; post-publication recheck pending. Not an acceptance of the replacement scene as final branding."
 }

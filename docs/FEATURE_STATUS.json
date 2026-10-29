@@ -1,15 +1,5 @@
 {
   "renderer": "project-authored CSS-3D compatibility scene; no WebGL dependency",
-  "workingInteractions": [
-    "continuous front/back rotation",
-    "pointer inertia",
-    "flip buttons and keyboard",
-    "reduce motion",
-    "feature popovers",
-    "fictional identity switching and failure/empty examples",
-    "copy installation prompt with manual fallback",
-    "real Release/install/source links"
-  ],
   "websiteDemoOnly": [
     "identity and quota values",
     "account switching",
@@ -33,5 +23,21 @@
     "reference artwork",
     "archives/evidence/private data"
   ],
-  "visualVerification": "Actual HTTPS screenshots at 1280x720 and 390x844. Feature popovers and initial download access observed. Keyboard focus/flip bug reproduced and minimum patch now supplied; post-publication recheck pending. Not an acceptance of the replacement scene as final branding."
+  "visualVerification": "Limited HTTPS browser review at 1280x720 and 390x844. Initial download and feature overlays visible. Focused F-flips in both directions and spin-button ARIA confirmed after runtime fix a7a4071. Replacement-scene branding is not accepted as final.",
+  "implementedInteractions": [
+    "continuous front/back rotation",
+    "pointer inertia",
+    "flip buttons and keyboard",
+    "reduce motion",
+    "feature popovers",
+    "fictional identity switching and failure/empty examples",
+    "copy installation prompt with manual fallback",
+    "real Release/install/source links"
+  ],
+  "notVerified": [
+    "Clipboard round-trip mismatched in the in-app browser; cause unresolved, not counted as passing",
+    "Full pointer inertia/drag and all keyboard-close paths",
+    "Full sample-account error/empty/return-focus flow",
+    "A second Windows computer or native mobile app"
+  ]
 }

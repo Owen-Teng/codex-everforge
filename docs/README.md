@@ -27,3 +27,9 @@ This directory is a static, interactive presentation candidate for Codex Everfor
 `index.html` 是入口；`app.js` 负责项目自编兼容场景；`account.js` 和 `profiles.js` 仅处理内存中的虚构身份；`feature-previews.js` 负责功能浮层；`install-prompt.js` 与 `download-config.js` 指向真实的固定版本安装说明。字体和自有图片在 `assets/`，所有运行路径均为相对路径。
 
 请不要把用户资料、私有截图、密钥、缓存、日志或原帖抓取内容放进这个公开目录。
+
+## 有限验收范围
+
+已在公开 HTTPS 页面取得 1280×720 与 390×844 实拍，确认初始下载入口可达，角色卡与消息功能浮层可见；聚焦后按 F 翻面的问题已修正，并在线验证正反翻面和旋转按钮 ARIA 状态。
+
+复制指令的剪贴板回读本轮未匹配，原因尚未确认，不列为通过；可以直接从页面或仓库首页手动复制安装指令。完整拖拽惯性、所有关闭/返回焦点路径，以及完整身份失败/空白流程仍待进一步验证。网站兼容候选的视觉质感低于保留的原 WebGL 场景，尚未当作已验收的正式主视觉。

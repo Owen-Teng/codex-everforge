@@ -1,0 +1,3 @@
+# Keep Unix launchers usable after checkout or packaging on Windows.
+*.sh text eol=lf
+*.command text eol=lf

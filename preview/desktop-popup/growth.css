@@ -1,0 +1,38 @@
+/* Local extension of the accepted warm App / navy collectible-card world. */
+.content{max-width:1170px}.profile-layout{align-items:start}.card-stage{max-width:350px;width:100%}
+.player-card{--rank-color:#b49a62;border-color:var(--rank-color)}
+.player-card::before{border-color:var(--rank-color);opacity:.65}
+.rank-seeker{--rank-color:#92a8ba}.rank-torchbearer{--rank-color:#d7a65c}.rank-shaper{--rank-color:#8ebfb7}.rank-maker{--rank-color:#d5b66c}.rank-worldweaver{--rank-color:#b5a5d5}.rank-worldbuilder{--rank-color:#e8cf95}
+.player-card .rank-seal,.player-card .card-status{border-color:var(--rank-color)}
+.player-card .rank-seal{color:var(--rank-color);width:34px;height:36px}
+.player-card .card-heading>svg{color:var(--rank-color)}
+.player-card.rank-worldbuilder{border-width:3px}.player-card.rank-worldweaver::before{inset:9px}.player-card.rank-shaper::before{border-radius:3px}
+.card-project-empty{font-size:11px;color:#c3cfd2}.card-back h2{font-size:25px}.card-back .rank-list{margin-top:18px}
+.rank-list li{gap:10px;padding:10px 0;justify-content:flex-start}.rank-list li>svg{width:20px;height:20px}.rank-list .rank-requirement{margin-left:auto;font-size:11px}
+.card-back .card-work{margin-top:20px}.card-visibility{font-size:12px!important}
+.growth-progress{margin:24px 0;padding:16px 0;border-block:1px solid var(--line)}
+.growth-progress>div:first-child{display:flex;justify-content:space-between;gap:15px;font-size:13px;line-height:1.7}
+.growth-progress strong{font-weight:600}.growth-progress span{font-variant-numeric:tabular-nums}
+.progress-track{height:5px;border-radius:3px;background:#dce3db;margin-top:13px;overflow:hidden}
+.progress-track>span{display:block;background:var(--green);height:100%;border-radius:3px}
+.growth-progress p{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
+.detail-column .project-detail{margin-bottom:14px}.detail-column .section-label .button{min-height:35px;padding:5px 10px}
+.section-label{margin-top:18px}.project-incomplete{color:#805b24!important}.detail-column .toggle-row{margin-top:25px}
+.growth-ranks{margin-top:12px}.growth-rank{display:flex;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.growth-rank>div{flex:1;min-width:0}.growth-rank strong{font-size:16px;display:block}.growth-rank small{display:block;font-size:11px;color:var(--muted);line-height:1.7;margin-top:3px}.growth-rank div>span{font-size:11px;line-height:1.7;color:var(--muted)}
+.rank-glyph{width:42px;height:46px;display:grid;place-items:center;border:1px solid var(--rank-color);border-radius:9px;background:var(--surface);flex-shrink:0;color:#3f565b}
+.rank-glyph svg{width:25px;height:25px}.growth-rank.current .rank-glyph{background:#e5ece5}.growth-rank[data-unlocked=false] .rank-glyph{background:#eceee9;color:#6f7f80}
+.auto-equip{display:inline-flex;gap:8px;align-items:center}.auto-equip[aria-pressed=true]{font-weight:600}
+.upgrade-banner{margin-bottom:22px;padding:14px 17px;background:#e6ecdf;border-radius:9px;display:flex;align-items:center;gap:13px;color:#284a37;flex-wrap:wrap}
+.upgrade-banner>svg{width:31px;height:31px}.upgrade-banner>div{flex:1;min-width:170px}.upgrade-banner strong{font-size:16px}.upgrade-banner p{font-size:12px;margin:5px 0 0;line-height:1.6}.upgrade-banner .button{flex-shrink:0}
+.rank-up{animation:rankAscend .8s cubic-bezier(.16,1,.3,1) both}
+@keyframes rankAscend{0%{filter:brightness(1);transform:translateY(0)}35%{filter:brightness(1.22);transform:translateY(-6px)}100%{filter:brightness(1);transform:translateY(0)}}
+.ledger-page{max-width:760px}.ledger-page .growth-progress{margin-top:0}.ledger-day{font-size:13px;line-height:1.9;color:var(--muted)}
+.receipt-list{list-style:none;padding:0;margin:23px 0}.receipt-list>li{display:flex;align-items:start;gap:15px;border-bottom:1px solid var(--line);padding:18px 0}.receipt-list li>div{flex:1;min-width:0}.receipt-list strong{font-size:14px}.receipt-list p{margin:7px 0;font-size:13px;line-height:1.7;color:var(--muted)}.receipt-list small{font-size:11px;color:var(--muted)}
+.receipt-glyph{padding-top:2px;color:var(--green)}.receipt-value{white-space:nowrap;font-size:15px;font-weight:600;color:var(--green);font-variant-numeric:tabular-nums}.seed-note{padding:12px 15px;background:#e7ece3;border-radius:8px;font-size:13px;color:var(--green);line-height:1.7}
+.duel-controls{display:grid;grid-template-columns:1fr 1fr;gap:18px}.duel-controls select{width:100%;padding:9px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)}
+.duel-lobby>.check-line{font-size:13px;line-height:1.8}.duel-lobby>.check-line input{margin-top:5px;width:17px;height:17px;flex-shrink:0}.dialog-card .player-card{width:100%}.dialog-card>p{margin-top:17px}.dialog-card .row-actions{justify-content:center}.dialog .player-card .card-work h3{font-size:15px}
+.dialog input,.dialog textarea{max-width:100%}.dialog .card-art{height:245px}.dialog .card-art img{height:320px}.form-error{line-height:1.8}.demo-tools{margin-top:28px}.demo-controls .button{white-space:normal}.nav button span{line-height:1.5}
+.duel-result .scoreline{margin-top:0;padding:14px}.duel-result .page-title{margin-bottom:18px}
+@media(min-width:701px){.duel-result .result-layout{align-items:start}.duel-result .player-card{min-height:0}.duel-result .card-art{height:200px}.duel-result .card-art img{height:275px;object-position:50% 18%}.duel-result .card-content{padding-bottom:18px}.duel-result .card-heading h2{font-size:27px}.duel-result .card-name{margin:5px 0 10px;font-size:11px;line-height:1.65}.duel-result .card-stats{padding:9px 0}.duel-result .card-work{padding-top:10px}.duel-result .card-work-label{margin-bottom:5px}.duel-result .card-work h3{margin-bottom:4px;font-size:15px}.duel-result .card-work p{margin-bottom:5px}.duel-result .work-link{min-height:24px}.duel-result .upgrade-banner{padding:8px 14px;margin-bottom:14px}.duel-result .upgrade-banner p{display:none}.duel-result .upgrade-banner .button{min-height:32px}.duel-result .result-detail h2{font-size:24px}}
+@media(max-width:700px){.profile-layout{gap:24px}.growth-progress{margin-block:22px}.growth-progress>div:first-child{font-size:14px}.growth-progress p{font-size:13px}.mobile-primary{margin-bottom:20px}.detail-column>p{font-size:14px}.growth-rank{gap:11px}.growth-rank strong{font-size:17px}.growth-rank small,.growth-rank div>span{font-size:12px}.growth-rank .button{padding-inline:10px;font-size:12px;max-width:125px}.receipt-list>li{gap:10px}.receipt-list p{font-size:14px}.ledger-day{font-size:14px}.card-back{min-height:530px}.duel-controls{gap:12px}.duel-controls select{font-size:16px}.upgrade-banner p{font-size:13px}.demo-controls label{flex-wrap:wrap}.demo-controls select{max-width:230px}.dialog-card .player-card{max-width:100%}}

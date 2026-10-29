@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "product": "Codex Everforge",
+  "supportedPlatform": "Windows 11 x64",
+  "channel": "acceptance-candidate",
+  "capabilities": {
+    "localQuota": "requires official Codex CLI login",
+    "desktopPopup": "native Windows host with four characters and three themes",
+    "publicResetMonitoring": "candidate; provider attribution and freshness shown",
+    "officialXStreaming": "not enabled",
+    "cloudFanout": "not deployed",
+    "membershipOAuth": "not deployed",
+    "blindDuel": "closed beta pending",
+    "upgrade": "verified package installer with file rollback",
+    "backgroundAutoUpdate": "not enabled"
+  },
+  "privacy": {"includesCredentials": false, "uploadsPrivateQuotaByDefault": false},
+  "codeSigning": "unsigned"
+}

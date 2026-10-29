@@ -1,0 +1,90 @@
+{
+  "synthetic": true,
+  "source": "Fictional offline regression fixture; not a real post or announcement.",
+  "posts": [
+    {
+      "postId": "9000000000000000101",
+      "url": "https://x.com/thsottiaux/status/9000000000000000101",
+      "author": "thsottiaux",
+      "publishedAt": 1793160000,
+      "firstReceivedAt": 1793160300,
+      "lastSeenAt": 1793160300,
+      "originalText": "Day 42/ A calendar add-on. Just kidding, today is a reset. Enjoy!",
+      "textCompleteness": "full",
+      "category": "related",
+      "status": "active",
+      "verification": "synthetic_test_fixture",
+      "sources": [
+        "aihot.news/codex-resets/v1"
+      ],
+      "aggregateStatus": "confirmed",
+      "aggregateAction": "announce",
+      "confirmationBasis": "source_post",
+      "references": [],
+      "delivery": {
+        "state": "",
+        "reason": ""
+      }
+    },
+    {
+      "postId": "9000000000000000102",
+      "url": "https://x.com/thsottiaux/status/9000000000000000102",
+      "author": "thsottiaux",
+      "publishedAt": 1793160060,
+      "firstReceivedAt": 1793160300,
+      "lastSeenAt": 1793160300,
+      "originalText": "Lands by midnight PST.",
+      "textCompleteness": "full",
+      "category": "related",
+      "status": "active",
+      "verification": "synthetic_test_fixture",
+      "sources": [
+        "aihot.news/codex-resets/v1"
+      ],
+      "aggregateStatus": "confirmed",
+      "aggregateAction": "amend",
+      "confirmationBasis": "source_post",
+      "references": [
+        {
+          "postId": "9000000000000000101",
+          "author": "thsottiaux",
+          "relation": "reply"
+        }
+      ],
+      "delivery": {
+        "state": "",
+        "reason": ""
+      }
+    },
+    {
+      "postId": "9000000000000000103",
+      "url": "https://x.com/thsottiaux/status/9000000000000000103",
+      "author": "thsottiaux",
+      "publishedAt": 1793160120,
+      "firstReceivedAt": 1793160300,
+      "lastSeenAt": 1793160300,
+      "originalText": "And it's done. See you tomorrow for some good news.",
+      "textCompleteness": "full",
+      "category": "related",
+      "status": "active",
+      "verification": "synthetic_test_fixture",
+      "sources": [
+        "aihot.news/codex-resets/v1"
+      ],
+      "aggregateStatus": "confirmed",
+      "aggregateAction": "confirm",
+      "confirmationBasis": "source_post",
+      "references": [
+        {
+          "postId": "9000000000000000102",
+          "author": "thsottiaux",
+          "relation": "quote"
+        }
+      ],
+      "delivery": {
+        "state": "",
+        "reason": ""
+      }
+    }
+  ]
+}

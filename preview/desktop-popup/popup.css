@@ -1,0 +1,125 @@
+/* Native compact surface, preserving the accepted navy/gold card world. */
+html,body,#app{height:100%;overflow:hidden}body{margin:0;padding:0;background:var(--paper)}
+.popup-shell{height:100%;display:grid;grid-template-rows:42px minmax(0,1fr) 55px}.popup-top{display:flex;align-items:center;gap:10px;padding:6px 14px;border-bottom:1px solid var(--line);background:var(--surface)}.popup-top>span{display:flex;align-items:center;gap:7px;font-size:15px}.popup-top>span>svg{color:var(--gold);width:22px;height:22px}.popup-top small{font-size:10px;color:var(--muted);margin-left:auto}.popup-close{border:0;background:transparent;display:flex;padding:5px;color:var(--muted)}.popup-close svg{width:16px;height:16px}
+.popup-content{padding:13px 15px;overflow:auto;overscroll-behavior:contain;min-width:0}.popup-content:focus{outline:none}.popup-nav{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line)}.popup-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:0;background:transparent;font-size:11px;line-height:1.2;color:var(--muted)}.popup-nav button>svg{width:18px;height:18px}.popup-nav button.active{background:#e7eee7;color:var(--green);font-weight:600}.popup-nav button b{font-size:10px}
+.popup-actions{display:flex;justify-content:center;gap:7px;margin-bottom:11px;flex-wrap:wrap}.popup-actions .button{font-size:12px;padding:7px 10px;min-height:34px}.popup-card{max-width:300px;margin:0 auto}.popup-content .player-card{min-height:0;max-width:100%;border-radius:12px}.popup-content .card-art{height:143px}.popup-content .card-art img{height:218px;object-position:50% 26%}.popup-content .card-content{padding:0 17px 14px;margin-top:-8px}.popup-content .card-crown{top:15px;left:17px;right:17px;font-size:9px}.popup-content .rank-seal{width:28px;height:31px}.popup-content .rank-seal svg{width:20px;height:20px}.popup-content .card-status{padding:4px 6px}
+.popup-content .card-heading h2{font-size:25px;line-height:1.3}.popup-content .card-heading>svg{width:25px;height:25px}.popup-content .card-name{margin:4px 0 9px;font-size:10px;line-height:1.6}.popup-content .card-xp{font-size:9px;margin-bottom:5px}.popup-content .xp-track{height:3px}.popup-content .card-stats{padding:7px 0}.popup-content .card-stats span{font-size:9px;margin-bottom:2px}.popup-content .card-stats strong{font-size:13px}.popup-content .card-visibility{font-size:10px!important}.popup-content .card-work{padding-top:8px}.popup-content .card-work-label{font-size:9px;margin-bottom:4px}.popup-content .card-work h3{font-size:14px;margin-bottom:3px;line-height:1.4}.popup-content .card-work p{font-size:10px;margin-bottom:4px;line-height:1.6}.popup-content .work-link{font-size:10px;min-height:23px}.popup-content .card-project-empty{font-size:10px}
+.popup-content .card-under{gap:20px;margin-top:8px}.popup-content .card-under button{font-size:11px;min-height:26px}.popup-content .card-back{padding:45px 21px 20px;min-height:405px}.popup-content .card-back h2{font-size:23px}.popup-content .card-back p{font-size:11px}.popup-content .card-back .rank-list{margin-block:14px}.popup-content .card-back li{padding:8px 0;font-size:12px}
+.popup-page-heading{margin:0 0 12px}.popup-page-heading h1{font-size:21px;line-height:1.3;margin:0 0 7px;letter-spacing:-.3px}.popup-page-heading p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}.popup-content .page-title h1{font-size:21px}.popup-content .page-title p{font-size:12px}.popup-content .page-title{margin-bottom:15px}
+.popup-content .settings-line{font-size:13px;padding:14px 0;gap:12px}.popup-content .settings-line small{font-size:11px}.popup-content .settings-line .button{font-size:11px;min-height:33px;padding:6px 9px}.popup-content .settings-line .switch{width:39px;height:23px}.popup-content .settings-line .switch::after{width:17px;height:17px}.popup-content .settings-line .switch[aria-checked=true]::after{left:19px}.popup-content .demo-tools{margin-top:18px;padding-top:12px}.popup-content .demo-controls{gap:8px}.popup-content .demo-controls select{max-width:210px}.popup-content .demo-controls .button{font-size:11px;min-height:32px}.popup-content .scene-note{font-size:11px}
+.popup-content.page-growth .profile-layout{display:block}.popup-content.page-growth .card-stage{display:none}.popup-content .growth-progress{margin:14px 0}.popup-content .growth-progress>div:first-child{font-size:13px}.popup-content .growth-progress p{font-size:11px}.popup-content .growth-rank{padding:11px 0}.popup-content .growth-rank strong{font-size:15px}.popup-content .rank-glyph{width:34px;height:38px}.popup-content .rank-glyph svg{width:23px;height:23px}.popup-content .growth-rank small,.popup-content .growth-rank div>span{font-size:10px}.popup-content .growth-rank .button{min-height:32px;font-size:11px}
+.popup-content .receipt-list>li{gap:10px;padding:13px 0}.popup-content .receipt-list p{font-size:12px}.popup-content .receipt-value{font-size:13px}.popup-content .ledger-day{font-size:12px}.popup-content .upgrade-banner{padding:8px 10px;margin-bottom:10px;gap:8px}.popup-content .upgrade-banner>div{min-width:130px}.popup-content .upgrade-banner strong{font-size:13px}.popup-content .upgrade-banner p{font-size:10px}.popup-content .upgrade-banner>svg{width:22px;height:22px}.popup-content .upgrade-banner .button{min-height:30px;font-size:10px;padding:5px 7px}
+.duel-prepared{display:flex;justify-content:center;align-items:center;gap:22px;margin:13px auto 15px}.duel-prepared .sealed-card{width:180px;height:225px;gap:11px}.duel-prepared .sealed-card>svg{width:52px;height:52px}.duel-prepared .sealed-card strong{font-size:19px}.duel-prepared .sealed-card small{font-size:11px}.duel-controls{max-width:550px;margin:auto;gap:14px}.duel-controls .field{margin:8px 0}.duel-controls .field span{font-size:12px;margin-bottom:5px}.duel-controls select{font-size:13px;padding:8px}.page-duel>.check-line{max-width:550px;margin:14px auto;font-size:12px}.page-duel>.check-line input{margin-top:4px;flex-shrink:0}.battle-actions{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin-top:12px}.battle-actions .button{font-size:13px;min-height:37px}.battle-actions>span{font-size:11px;color:var(--muted)}
+.battle-scene{position:relative;display:flex;justify-content:center;align-items:center;gap:56px;height:407px;overflow:hidden;perspective:1200px}.duel-unit{width:246px;height:385px;position:relative;flex-shrink:0}.duel-flipper{height:100%;width:100%;position:relative;transform-style:preserve-3d}.duel-face{position:absolute;inset:0;backface-visibility:hidden}.duel-face.front{transform:rotateY(180deg)}.duel-face.back .sealed-card{width:100%;height:100%;background:#142832}.duel-face.back .sealed-card>svg{height:75px;width:75px}.duel-face.back .sealed-card strong{font-size:22px}.battle-scene .player-card{height:100%}.battle-scene .card-art{height:136px}.battle-scene .card-art img{height:211px}.battle-scene .card-content{padding-inline:15px}.battle-scene .card-work h3{font-size:13px}.battle-scene button{pointer-events:none}
+.impact-mark{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);color:var(--gold);opacity:.5;pointer-events:none}.impact-mark svg{width:28px;height:28px}.fragment-layer,.card-shard{position:absolute;inset:0;pointer-events:none}.card-shard>.player-card{height:100%;width:100%;max-width:none}.card-shard{will-change:transform,opacity}.popup-result{display:grid;grid-template-columns:minmax(235px,280px) minmax(0,1fr);gap:27px;max-width:760px;margin:12px auto 0;align-items:start}.winner-card{animation:winnerSettle .28s cubic-bezier(.16,1,.3,1)}.popup-result .player-card{min-height:0}.popup-result-copy h2{font-size:22px;line-height:1.4;margin:20px 0 12px}.popup-result-copy p{font-size:13px;line-height:1.8;color:var(--muted)}.popup-result-copy .button{font-size:12px;min-height:36px}.popup-score{display:flex;align-items:center;gap:22px;justify-content:center;background:#e5ebe2;border-radius:9px;padding:16px}.popup-score span{font-size:11px;color:var(--muted)}.popup-score strong{display:block;color:var(--ink);font-size:23px;white-space:nowrap;margin-top:5px;font-variant-numeric:tabular-nums}
+.popup-notices{list-style:none;padding:0;margin:0}.popup-notices li{padding:16px 0;border-bottom:1px solid var(--line)}.popup-notices strong{font-size:14px}.popup-notices p{font-size:13px;color:var(--muted);line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}.popup-notices small{font-size:11px;color:var(--muted)}.popup-empty{text-align:center;padding:60px 15px;color:var(--muted)}.popup-empty>svg{width:40px;height:40px}.popup-empty p{font-size:13px;line-height:1.8}
+.dialog{max-height:calc(100dvh - 20px);padding:18px;max-width:430px}.dialog-head h2{font-size:19px}.dialog .field{margin:12px 0}.dialog .field input,.dialog .field textarea{font-size:14px;padding:9px}.dialog .field textarea{min-height:65px}.dialog .field small{font-size:10px}.dialog p{font-size:12px;line-height:1.7}.dialog .button{font-size:12px;min-height:35px}.dialog-card .player-card{max-width:270px}.dialog-card .card-art{height:170px}.dialog-card .card-art img{height:245px}.dialog-card .card-content{padding-inline:18px}.dialog-card .card-stats{padding-block:8px}.dialog-card .card-name{font-size:11px;margin:5px 0 10px}.dialog-card .card-heading h2{font-size:26px}.dialog-card .card-work p{font-size:11px}#toast{bottom:65px;font-size:12px;padding:9px 13px}
+@keyframes winnerSettle{from{transform:scale(.97)}to{transform:scale(1)}}
+/* Keep consent and the first move above navigation at the native 650px client height. */
+.page-duel:has(.duel-prepared) .popup-page-heading{margin-bottom:8px}
+.duel-prepared{margin:8px auto 10px}
+.duel-prepared .sealed-card{height:158px;gap:7px}
+.duel-prepared .sealed-card>svg{width:40px;height:40px}
+.page-duel:has(.duel-prepared) .duel-controls .field{margin:6px 0}
+.page-duel:has(.duel-prepared)>.check-line{margin:9px auto}
+.page-duel:has(.duel-prepared) .battle-actions{margin-top:8px}
+@media(max-width:650px){.battle-scene{gap:22px;height:360px}.duel-unit{width:min(42vw,230px);height:335px}.battle-scene .card-art{height:106px}.battle-scene .card-art img{height:181px}.battle-scene .card-content{padding:0 11px 9px}.battle-scene .card-heading h2{font-size:20px}.battle-scene .card-heading>svg{width:21px;height:21px}.battle-scene .card-name{font-size:8px}.battle-scene .card-work p{font-size:9px}.battle-scene .card-crown{left:12px;right:12px;font-size:8px}.battle-scene .rank-seal{width:24px;height:27px}.battle-scene .card-stats strong{font-size:11px}.battle-scene .card-visibility{font-size:9px!important}.battle-scene .card-work h3{font-size:12px}.battle-scene .card-xp{font-size:8px}.battle-scene .work-link{font-size:9px}.duel-prepared{gap:15px}.duel-prepared .sealed-card{width:160px;height:205px}.popup-result{grid-template-columns:1fr;gap:16px}.winner-card{width:280px;max-width:100%;margin:auto}.popup-result-copy{max-width:400px;margin:auto}.popup-content .check-line{font-size:12px}.popup-close{display:none}}
+@media(max-width:650px){.duel-prepared .sealed-card{height:158px}}
+@media(max-height:540px){.popup-content .card-art{height:110px}.popup-content .card-art img{height:185px}.battle-scene{height:310px}.duel-unit{height:300px}.duel-prepared .sealed-card{height:110px}.duel-prepared .sealed-card>svg{width:26px;height:26px}.popup-page-heading p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.winner-card{animation:none!important}}
+
+/* Borderless surface: application controls replace the removed OS caption. */
+.popup-top{app-region:drag;-webkit-app-region:drag;user-select:none}
+.popup-top button{app-region:no-drag;-webkit-app-region:no-drag}
+.popup-close,.popup-move{display:inline-flex!important;align-items:center;justify-content:center;flex:none;width:32px;min-height:32px;padding:5px;border:0;border-radius:5px;background:transparent;color:var(--muted);cursor:pointer}
+.popup-close svg,.popup-move svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.popup-close:hover,.popup-move:hover{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink)}
+.popup-close:focus-visible,.popup-move:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.popup-top small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.popup-content{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.popup-content::-webkit-scrollbar{width:5px;height:5px}
+.popup-content::-webkit-scrollbar-track{background:transparent}
+.popup-content::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.popup-content::-webkit-scrollbar-button{display:none}
+
+/* Product identity stays compact; the user's name leads and window controls never shrink. */
+.popup-top .popup-brand{flex:1;min-width:0;gap:7px}
+.popup-account{font-size:14px;min-width:24px;max-width:100px;flex:0 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.popup-product{font-size:13px;font-weight:500;white-space:nowrap;flex:0 0 auto;color:var(--muted)}
+.popup-top>small{display:none}
+.popup-top .popup-move{margin-left:0}
+.popup-brand>svg{flex:none}
+
+/* All existing routes use the same outer window, including the two-card reveal. */
+.popup-shell{grid-template-rows:42px minmax(0,1fr) 48px}
+.page-duel .popup-page-heading{margin-bottom:8px}
+.page-duel .popup-page-heading h1{font-size:18px;margin-bottom:4px}
+.page-duel .popup-page-heading p{font-size:12px;line-height:1.5}
+.popup-result{display:grid;grid-template-columns:1fr;gap:8px;margin:6px auto 0;max-width:420px}
+.popup-result .winner-card{width:100%;margin:0}
+.popup-result .player-card{display:grid;grid-template-columns:37% minmax(0,1fr);height:208px;min-height:0;overflow:hidden}
+.popup-result .card-art{grid-column:1;grid-row:1;height:100%;margin:0}
+.popup-result .card-art img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.popup-result .card-crown{top:5px;left:5px;right:auto;max-width:35%;gap:3px}
+.popup-result .rank-seal{width:20px;height:22px}
+.popup-result .rank-seal svg{width:15px;height:15px}
+.popup-result .card-status{font-size:9px;padding:2px 3px}
+.popup-result .card-content{grid-column:2;grid-row:1;min-width:0;margin:0;padding:8px 10px}
+.popup-result .card-heading h2{font-size:17px;line-height:1.3}
+.popup-result .card-heading>svg{width:17px;height:17px}
+.popup-result .card-name{font-size:10px;line-height:1.4;margin:3px 0 5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.popup-result .card-xp{font-size:10px;margin:0 0 4px}
+.popup-result .xp-track{height:3px}
+.popup-result .card-stats{display:none}
+.popup-result .card-work{padding-top:5px;margin-top:4px}
+.popup-result .card-work-label{font-size:10px;margin:0 0 2px}
+.popup-result .card-work h3{font-size:13px;line-height:1.35;margin:0 0 3px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.popup-result .card-work p{font-size:11px;line-height:1.4;margin:0 0 3px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.popup-result .work-link{font-size:11px;min-height:22px;padding:2px 0;max-width:100%;overflow:hidden}
+.popup-result-copy{width:100%;max-width:none;margin:0}
+.popup-score{padding:5px 8px;gap:16px}
+.popup-score span{font-size:10px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.popup-score strong{font-size:18px;line-height:1.2;margin-top:2px}
+.popup-result-copy h2{font-size:16px;line-height:1.3;margin:5px 0 3px}
+.popup-result-copy p{font-size:11px;line-height:1.4;margin:2px 0}
+.popup-result-copy .scene-note{font-size:10px;line-height:1.4}
+.popup-result-copy .row-actions{margin-top:6px;gap:6px;flex-wrap:nowrap}
+.popup-result-copy .button{font-size:12px;min-height:32px;padding:5px 8px}
+@media(max-height:580px){
+ .popup-shell{grid-template-rows:38px minmax(0,1fr) 46px}
+ .popup-content{padding:10px 12px}
+ .duel-prepared{margin:5px auto 7px;gap:12px}
+ .duel-prepared .sealed-card{height:96px;gap:5px}
+ .duel-prepared .sealed-card>svg{width:24px;height:24px}
+ .duel-prepared .sealed-card strong{font-size:16px}
+ .duel-prepared .sealed-card small{font-size:10px}
+ .page-duel:has(.duel-prepared) .duel-controls .field{margin:4px 0}
+ .page-duel:has(.duel-prepared) .duel-controls .field span{margin-bottom:3px}
+ .page-duel:has(.duel-prepared) .duel-controls select{padding:5px 7px;min-height:30px}
+ .page-duel:has(.duel-prepared)>.check-line{margin:7px auto;font-size:11px;line-height:1.4}
+ .page-duel:has(.duel-prepared) .battle-actions{margin-top:6px;gap:8px}
+ .page-duel:has(.duel-prepared) .battle-actions .button{min-height:32px;font-size:12px;padding:5px 8px}
+ .page-duel:has(.duel-prepared) .battle-actions>span{font-size:10px}
+ .battle-scene{height:260px;gap:16px}
+ .duel-unit{height:248px;width:calc((100% - 16px)/2)}
+ .battle-scene .card-art{height:31%}
+ .battle-scene .card-art img{height:160%;object-fit:cover}
+ .battle-scene .card-content{padding:4px 7px;margin:0}
+ .battle-scene .card-heading h2{font-size:15px}
+ .battle-scene .card-heading>svg{width:16px;height:16px}
+ .battle-scene .card-name{font-size:10px;line-height:1.4;margin:3px 0}
+ .battle-scene .card-stats,.battle-scene .card-xp,.battle-scene .xp-track,.battle-scene .card-work-label,.battle-scene .card-work p,.battle-scene .work-link{display:none}
+ .battle-scene .card-work{padding-top:5px;margin-top:3px}
+ .battle-scene .card-work h3{font-size:12px;line-height:1.4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+ .popup-result{gap:6px;margin-top:4px}
+ .popup-result .player-card{height:180px}
+ .popup-result .card-content{padding:6px 8px}
+ .popup-result .card-heading h2{font-size:15px}
+ .popup-result .card-name{margin:2px 0 3px}
+ .popup-result .card-work{padding-top:3px;margin-top:2px}
+ .popup-result .card-work h3{font-size:12px}
+ .popup-result .card-work p{font-size:10px}
+ .popup-result-copy h2{font-size:15px;margin-top:4px}
+}
+@media(max-height:580px){.popup-result .player-card{height:198px;min-height:198px}}
+.popup-result-copy .row-actions{margin:6px 0 0}

@@ -1,0 +1,152 @@
+/* Approved B palette. Critical text sits on opaque navy, separate from the illustration. */
+.maker-home-page{--paper:#10202d;--surface:#172e3c;--ink:#f6efdf;--muted:#c0cbd0;--line:#50616a;--green:#e4c27c;--gold:#e4c27c;color-scheme:dark;background:#10202d;color:var(--ink)}
+.maker-home-page .popup-top{background:#10202d;border-color:#384b57}.maker-home-page .popup-top small{font-size:12px;color:#c0cbd0}.maker-home-page .popup-top>span{font-size:16px}.maker-home-page .popup-nav{background:#10202d;border-color:#50616a}.maker-home-page .popup-nav button{color:#c0cbd0;font-size:12px}.maker-home-page .popup-nav button.active{background:#243d49;color:#f4d79e}.maker-home-page .popup-content{padding:14px 16px;scroll-padding:12px}.maker-home-page button:focus-visible,.maker-home-page summary:focus-visible,.maker-home-page a:focus-visible{outline:3px solid #f8dc9f;outline-offset:3px}
+.maker-table{border:1px solid #947d4e;border-radius:12px;background:#19313f;overflow:hidden;box-shadow:inset 0 0 0 4px #10252f;font-size:16px;line-height:1.5}.maker-table h1,.maker-table h2,.maker-table h3,.maker-table p{margin:0}.maker-hero{display:grid;grid-template-columns:61% 39%;min-height:184px}.maker-readings{position:relative;z-index:1;padding:12px 0 6px 18px}.maker-readings .maker-scope{font-size:13px;color:#d9d5c7;line-height:1.5}.maker-readings h1{font-size:16px;font-weight:500;line-height:1.5;letter-spacing:0;margin-top:6px}.maker-amount{display:flex;align-items:baseline;gap:9px;line-height:1.15;margin:4px 0 7px;font-variant-numeric:tabular-nums}.maker-amount strong{font-size:64px;font-weight:500;color:#e4c27c;letter-spacing:-.04em}.maker-amount>span{font-size:16px;color:#d1d6d3}.maker-reset-time{display:flex;flex-direction:column;font-size:13px;line-height:1.6;color:#c0cbd0}.maker-reset-time strong{font-size:14px;color:#f6efdf;font-weight:500}.maker-art{position:relative;min-width:0;overflow:hidden}.maker-art img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:48% 24%;inset:0}.maker-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#19313f,transparent 25%),linear-gradient(0deg,#19313f,transparent 20%);pointer-events:none}
+#maker-meter-area{padding:0 18px 9px}.maker-meter{height:5px;background:#52616a;border-radius:3px;overflow:hidden}.maker-meter>span{height:100%;display:block;background:#e4c27c}.maker-reading-status{font-size:13px;color:#c0cbd0;padding-top:6px;line-height:1.5;min-height:25px}.maker-rank{border-top:1px solid #657064;margin:0 18px;font-size:14px}.maker-rank summary{list-style:none;display:flex;align-items:center;gap:7px;min-height:43px;cursor:pointer}.maker-rank summary::-webkit-details-marker{display:none}.maker-rank summary>svg{width:18px;height:18px;color:#e4c27c}.maker-rank summary>span{margin-left:auto;color:#c0cbd0;font-size:13px}.maker-rank summary:after{content:'⌄';color:#e4c27c}.maker-rank[open] summary:after{transform:rotate(180deg)}.maker-rank>div{padding-bottom:14px}.maker-rank p{color:#c0cbd0;font-size:14px;padding-block:8px}.maker-rank .button{background:#243d49;border-color:#657064;color:#f6efdf;font-size:14px;min-height:36px}
+.maker-profile-part{margin:0 18px;border-top:1px solid #657064;padding:7px 0 11px}.maker-profile-part header{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:32px}.maker-profile-part h2{font-size:15px;line-height:1.5;color:#f6efdf;font-weight:650}.maker-config{display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;border:1px solid #7b8b8f;border-radius:6px;background:#203c4a;color:#f4d79e;font-size:13px;padding:3px 8px}.maker-config span{font-size:24px;font-weight:400;line-height:1}.maker-config:hover{background:#2a4856}.maker-empty{font-size:14px;color:#c0cbd0;line-height:1.6;padding-top:2px}.maker-authored{padding-top:3px}.maker-authored h3{font-size:16px;line-height:1.5;overflow-wrap:anywhere}.maker-authored p,.maker-authored-bio{font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;color:#d7deda}.maker-authored a{display:flex;align-items:center;gap:6px;font-size:14px;color:#f1d18d;min-height:30px;overflow-wrap:anywhere}.maker-authored a>svg{width:15px;height:15px}.maker-authored-bio{padding-top:3px}
+.maker-reset-seal{width:100%;display:flex;align-items:center;gap:10px;margin:8px 0 0;padding:8px 0;border:0;border-top:1px solid #50616a;border-bottom:1px solid #50616a;background:transparent;color:#f6efdf;text-align:left;min-height:57px}.maker-reset-seal>svg{color:#e4c27c;width:21px;height:21px}.maker-reset-seal>span:last-child{margin-left:auto;font-size:25px;color:#e4c27c}.maker-reset-seal strong{display:block;font-size:15px;line-height:1.5}.maker-reset-seal small{display:block;font-size:13px;color:#c0cbd0;line-height:1.6}.maker-reset-seal:hover{background:#19313f}.maker-sync{display:flex;flex-wrap:wrap;gap:0 15px;font-size:13px;color:#c0cbd0;line-height:1.6;padding-top:10px;font-variant-numeric:tabular-nums}.maker-usage{width:100%;display:flex;align-items:center;gap:8px;border:0;background:transparent;padding:9px 0 2px;color:#c0cbd0;font-size:13px;text-align:left;min-height:32px}.maker-usage strong{font-weight:500;margin-left:auto;color:#f6efdf}.maker-usage svg{width:14px;height:14px}.maker-save-warning{font-size:14px;color:#ffd2a6}.maker-home-page #toast{background:#e4c27c;color:#142832}
+.maker-dialog{--surface:#f8f8f3;--ink:#203f35;--muted:#586b60;--line:#cbd5ca;--green:#175d48;color-scheme:light;color:var(--ink);background:var(--surface);font-size:16px}.maker-dialog .field span{font-size:15px}.maker-dialog .field input,.maker-dialog .field textarea{font-size:16px;line-height:1.5}.maker-dialog .field textarea{min-height:96px}.maker-dialog .dialog-head h2{font-size:20px}.maker-dialog .close{color:#203f35;min-width:32px;min-height:32px}.maker-dialog p,.maker-dialog .button{font-size:14px;line-height:1.7}.maker-dialog .button{min-height:38px;color:#203f35}.maker-dialog .button.primary{background:#175d48;color:white}.maker-dialog #maker-edit-error{color:#9e3028;font-size:14px;margin:10px 0}.maker-dialog .row-actions{gap:8px}.maker-dialog button:focus-visible,.maker-dialog input:focus-visible,.maker-dialog textarea:focus-visible{outline-color:#175d48}.maker-facts{font-size:14px;margin:0 0 18px}.maker-facts>div{display:grid;grid-template-columns:85px minmax(0,1fr);gap:12px;margin:8px 0}.maker-facts dt{color:#586b60}.maker-facts dd{margin:0}.maker-dialog h3{font-size:16px;margin:14px 0 6px}.maker-window-list{list-style:none;margin:0;padding:0;font-size:14px}.maker-window-list li{padding:9px 0;border-bottom:1px solid #cbd5ca}.maker-window-list span{display:block;color:#586b60;line-height:1.8}
+@media(max-width:390px){.maker-home-page .popup-content{padding:12px}.maker-readings{padding-left:14px}.maker-amount strong{font-size:58px}.maker-home-page .popup-top small{display:none}.maker-rank summary{flex-wrap:wrap;padding-block:7px}.maker-rank summary>span{margin-left:0}.maker-sync{flex-direction:column}.maker-profile-part{margin-inline:14px}}
+@media(prefers-reduced-motion:reduce){.maker-home-page *{animation:none!important;transition:none!important}}
+@media(forced-colors:active){.maker-table,.maker-config,.maker-reset-seal{border:1px solid CanvasText}.maker-meter{border:1px solid CanvasText}.maker-meter>span{background:Highlight}.maker-art{display:none}.maker-hero{display:block}}
+
+/* A prioritizes the reading; C prioritizes evidence. Both share B's data and authoring controls. */
+.maker-home-page.theme-a,.maker-home-page.theme-c{--paper:#f8f8f3;--surface:#fffefa;--ink:#203f35;--muted:#586b60;--line:#cfdbcf;--green:#175d48;--gold:#825f23;color-scheme:light;color:var(--ink);background:var(--paper)}
+.maker-home-page.theme-a .popup-top,.maker-home-page.theme-c .popup-top,.maker-home-page.theme-a .popup-nav,.maker-home-page.theme-c .popup-nav{background:#fffefa;border-color:#cfdbcf}.maker-home-page.theme-a .popup-top small,.maker-home-page.theme-c .popup-top small,.maker-home-page.theme-a .popup-nav button,.maker-home-page.theme-c .popup-nav button{color:#586b60}.maker-home-page.theme-a .popup-nav button.active,.maker-home-page.theme-c .popup-nav button.active{background:#e7eee7;color:#175d48}.maker-home-page.theme-a button:focus-visible,.maker-home-page.theme-c button:focus-visible,.maker-home-page.theme-a summary:focus-visible,.maker-home-page.theme-c summary:focus-visible{outline-color:#175d48}
+.theme-a .maker-variant-title,.theme-c .maker-variant-title{margin:0 0 10px}.maker-variant-title h2{font-size:20px;margin:0 0 4px;line-height:1.4}.maker-variant-title p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.theme-a .maker-readings,.theme-c .maker-readings{padding:0}.theme-a .maker-readings .maker-scope,.theme-c .maker-readings .maker-scope,.theme-a .maker-amount>span,.theme-c .maker-amount>span,.theme-a .maker-reset-time,.theme-c .maker-reset-time{color:#586b60}.theme-a .maker-amount strong{color:#175d48;font-size:68px}.theme-a .maker-reset-time strong,.theme-c .maker-reset-time strong{color:#203f35}.theme-a #maker-meter-area,.theme-c #maker-meter-area{padding:8px 0 0}.theme-a .maker-meter,.theme-c .maker-meter{background:#cad6cc}.theme-a .maker-meter>span,.theme-c .maker-meter>span{background:#175d48}.theme-a .maker-reading-status,.theme-c .maker-reading-status,.theme-a .maker-sync,.theme-c .maker-sync{color:#586b60}.theme-a .maker-reset-seal,.theme-c .maker-reset-seal{color:#203f35;border-color:#c7d4ca}.theme-a .maker-reset-seal small,.theme-c .maker-reset-seal small{color:#586b60}.theme-a .maker-reset-seal>svg,.theme-c .maker-reset-seal>svg,.theme-a .maker-reset-seal>span:last-child,.theme-c .maker-reset-seal>span:last-child{color:#175d48}.theme-a .maker-reset-seal:hover,.theme-c .maker-reset-seal:hover{background:#eaf0e8}
+.theme-a .maker-profile-part,.theme-c .maker-profile-part{margin:0;border-color:#c7d4ca;padding:8px 0 11px}.theme-a .maker-profile-part h2,.theme-c .maker-profile-part h2{color:#203f35}.theme-a .maker-config,.theme-c .maker-config{background:#f5f7ef;color:#175d48;border-color:#728878}.theme-a .maker-empty,.theme-c .maker-empty,.theme-a .maker-authored p,.theme-c .maker-authored p,.theme-a .maker-authored-bio,.theme-c .maker-authored-bio{color:#586b60}.theme-a .maker-authored a,.theme-c .maker-authored a{color:#175d48}.maker-focus-profile,.maker-timeline-profile{margin-top:14px}.maker-focus-identity{display:flex;align-items:center;gap:12px;padding-top:10px;border-top:1px solid #c7d4ca}.maker-focus-identity>img{object-fit:cover;object-position:50% 20%;border-radius:5px}.theme-a .maker-rank,.theme-c .maker-rank{margin:0;flex:1;border-color:#c7d4ca}.theme-a .maker-rank{border:0}.theme-a .maker-rank summary>span,.theme-c .maker-rank summary>span,.theme-a .maker-rank p,.theme-c .maker-rank p{color:#586b60}.theme-a .maker-rank summary>svg,.theme-c .maker-rank summary>svg{color:#825f23}.theme-a .maker-rank .button,.theme-c .maker-rank .button{background:#edf2e9;color:#175d48;border-color:#c7d4ca}.theme-a .maker-usage,.theme-c .maker-usage{color:#586b60}.theme-a .maker-usage strong,.theme-c .maker-usage strong{color:#203f35}
+.maker-timeline-current{padding-bottom:14px;border-bottom:1px solid #c7d4ca;margin-bottom:16px}.theme-c .maker-readings{display:grid;grid-template-columns:1fr auto;column-gap:12px}.theme-c .maker-scope{grid-column:1}.theme-c .maker-readings h1{grid-column:1}.theme-c .maker-amount{grid-column:2;grid-row:1/3;margin:0}.theme-c .maker-amount strong{font-size:44px;color:#175d48}.theme-c .maker-reset-time{grid-column:1/-1;flex-direction:row;gap:12px;margin-top:7px}.maker-timeline{list-style:none;margin:0;padding:0}.maker-timeline li{padding:10px 0 13px 14px;border-bottom:1px solid #c7d4ca;border-left:2px solid #728878;font-size:14px;line-height:1.7}.maker-timeline li>span{display:block;color:#586b60;font-size:13px}.maker-timeline strong{display:block;color:#203f35;font-size:15px}.maker-timeline p{margin:4px 0;color:#586b60}.maker-timeline small{color:#586b60;font-size:13px}#maker-theme{font-size:13px;max-width:185px;padding:8px;border:1px solid #8c9c8f;border-radius:6px;background:#fffefa;color:#203f35}
+/* A native WebView can have a smaller CSS viewport under Windows text scaling. */
+.maker-table>.maker-sync{padding:0 18px 8px;gap:0 12px}
+@media(max-height:580px){
+ .maker-home-page .popup-shell{grid-template-rows:36px minmax(0,1fr) 48px}
+ .maker-home-page .popup-content{padding:9px 12px}
+ .maker-home-page .popup-top{padding-block:3px}
+ .theme-b .maker-hero{min-height:0}
+ .theme-b .maker-readings{padding:8px 0 4px 14px}
+ .theme-b .maker-readings h1{margin-top:3px;font-size:14px}
+ .theme-b .maker-amount{margin:2px 0 4px}
+ .theme-b .maker-amount strong{font-size:52px}
+ .theme-b .maker-reset-time{flex-direction:row;gap:7px;flex-wrap:wrap}
+ .theme-b #maker-meter-area{padding:0 14px 5px}
+ .theme-b .maker-rank{margin:0 14px}
+ .theme-b .maker-rank summary{min-height:34px;padding-block:4px}
+ .theme-b .maker-profile-part{margin:0 14px;padding:4px 0 7px}
+ .theme-b .maker-profile-part header{min-height:30px}
+ .theme-b .maker-empty{display:none}
+ .theme-b .maker-table>.maker-sync{padding:0 14px 6px;flex-direction:column}
+ .theme-b .maker-reset-seal{margin-top:7px;padding:7px 0;min-height:50px}
+}
+
+.maker-readings p{margin:0}
+
+/* Fit the real home content; do not clip an overflowing page to hide its scrollbar. */
+.maker-home-page .popup-shell{grid-template-rows:42px minmax(0,1fr) 48px}
+.maker-home-page .popup-content{padding:12px 14px;min-height:0}
+.maker-home-page .popup-top{gap:6px}
+.maker-home-page .popup-top>span{gap:7px;white-space:nowrap}
+.maker-hero{min-height:0;height:168px}
+.maker-readings{padding:8px 0 4px 16px}
+.maker-readings h1{font-size:14px;margin-top:3px}
+.maker-amount{margin:3px 0 5px}
+.maker-amount strong{font-size:60px}
+.maker-reset-time{flex-direction:row;align-items:baseline;gap:7px;flex-wrap:wrap;font-size:12px}
+.maker-reset-time strong{font-size:13px}
+#maker-meter-area{padding:0 16px 6px}
+.maker-reading-status{font-size:12px;padding-top:4px;min-height:22px}
+.maker-table>.maker-sync{padding:0 16px 7px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;font-size:12px}
+.maker-rank{margin:0 16px}
+.maker-rank summary{min-height:36px;padding-block:4px;font-size:14px}
+.maker-rank summary>span{font-size:12px}
+.maker-profile-part{margin:0 16px;padding:6px 0;display:grid;grid-template-columns:76px minmax(0,1fr) 30px;align-items:center;gap:6px;min-height:43px}
+.maker-profile-part header{display:contents}
+.maker-profile-part h2{grid-column:1;grid-row:1;font-size:14px}
+.maker-config{grid-column:3;grid-row:1;min-width:30px;min-height:30px;padding:2px}
+.maker-empty{display:none}
+.maker-authored,.maker-authored-bio{grid-column:2;grid-row:1;min-width:0;padding:0}
+.maker-authored{display:flex;align-items:center;gap:5px}
+.maker-authored h3{flex:1;min-width:0;font-size:13px;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.maker-authored p{display:none}
+.maker-authored a{flex:none;min-height:26px;min-width:24px;justify-content:center;font-size:0;overflow:hidden;gap:0}
+.maker-authored a svg{width:16px;height:16px}
+.maker-authored-bio{font-size:13px;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.maker-reset-seal{min-height:48px;margin-top:8px;padding:6px 0}
+.maker-reset-seal strong{font-size:14px}
+.maker-reset-seal small{font-size:12px;line-height:1.5}
+.maker-usage{padding:6px 0 0;min-height:28px;font-size:12px}
+.maker-usage strong{font-size:12px}
+@media(max-height:580px){
+ .maker-home-page .popup-shell{grid-template-rows:38px minmax(0,1fr) 46px}
+ .maker-home-page .popup-content{padding:10px 12px}
+ .theme-b .maker-hero{height:132px;min-height:0}
+ .theme-b .maker-readings{padding:6px 0 3px 14px}
+ .theme-b .maker-readings .maker-scope{font-size:12px;line-height:1.5}
+ .theme-b .maker-readings h1{font-size:13px;margin-top:1px}
+ .theme-b .maker-amount{margin:2px 0 4px}
+ .theme-b .maker-amount strong{font-size:46px}
+ .theme-b .maker-amount>span{font-size:13px}
+ .theme-b .maker-reset-time{font-size:12px;gap:6px;line-height:1.5}
+ .theme-b .maker-reset-time strong{font-size:12px}
+ .theme-b #maker-meter-area{padding:0 14px 5px}
+ .theme-b .maker-reading-status{font-size:12px;min-height:20px;padding-top:3px}
+ .theme-b .maker-table>.maker-sync{padding:0 14px 6px;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .theme-b .maker-rank{margin:0 14px}
+ .theme-b .maker-rank summary{min-height:32px;flex-wrap:nowrap;font-size:13px}
+ .theme-b .maker-rank summary>span{margin-left:auto;font-size:12px}
+ .theme-b .maker-profile-part{margin:0 14px;padding:4px 0;min-height:39px}
+ .theme-b .maker-reset-seal{min-height:44px;padding:5px 0;margin-top:7px}
+ .theme-b .maker-reset-seal small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+ .theme-b .maker-usage{min-height:26px;padding-top:4px}
+}
+/* Keep edited controls single-line and align the borderless window controls at narrow widths. */
+.maker-profile-part{grid-template-columns:76px minmax(0,1fr) 32px}
+.maker-config{width:32px;min-width:32px;padding:0;font-size:12px;white-space:nowrap}
+.maker-reset-seal>span:nth-child(2){flex:1;min-width:0}
+.theme-a .maker-variant-title,.theme-c .maker-variant-title{margin:0 0 7px}
+.theme-a .maker-variant-title h2,.theme-c .maker-variant-title h2{font-size:16px;margin:0;line-height:1.4}
+.theme-a .maker-variant-title p,.theme-c .maker-variant-title p{display:none}
+.theme-a .maker-amount strong{font-size:52px}
+.theme-a .maker-readings h1{margin-top:2px;font-size:14px}
+.theme-a .maker-sync,.theme-c .maker-sync{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;font-size:12px;line-height:1.5;padding-top:5px}
+.theme-a .maker-profile-part,.theme-c .maker-profile-part{margin:0;padding:5px 0;min-height:41px}
+.maker-focus-profile,.maker-timeline-profile{margin-top:8px}
+.maker-focus-identity{gap:8px;padding-top:5px}
+.maker-focus-identity>img{width:26px;height:36px}
+.theme-a .maker-rank summary,.theme-c .maker-rank summary{min-height:33px;padding-block:3px;flex-wrap:nowrap;font-size:13px}
+.theme-a .maker-rank summary>span,.theme-c .maker-rank summary>span{margin-left:auto;font-size:12px}
+.theme-c .maker-timeline-current{padding-bottom:6px;margin-bottom:8px}
+.theme-c .maker-reset-time{margin-top:4px;font-size:12px;line-height:1.5}
+.theme-c .maker-reset-time strong{font-size:13px}
+.theme-c .maker-readings .maker-scope{font-size:12px;line-height:1.5}
+.theme-c .maker-amount strong{font-size:38px}
+.theme-c .maker-timeline li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:2px 8px;padding:5px 8px;font-size:12px;line-height:1.4}
+.theme-c .maker-timeline li>span{grid-column:1;grid-row:1;font-size:12px;line-height:1.5}
+.theme-c .maker-timeline strong{grid-column:2;grid-row:1;font-size:13px;line-height:1.5}
+.theme-c .maker-timeline p{display:none}
+.theme-c .maker-timeline small{grid-column:2;font-size:12px;line-height:1.4}
+@media(max-width:390px){.maker-home-page .popup-move{margin-left:auto}}
+@media(max-height:580px){
+ .theme-a .maker-amount strong{font-size:46px}
+ .theme-a .maker-amount{margin:2px 0 4px}
+ .theme-a .maker-readings .maker-scope{font-size:12px}
+ .theme-a #maker-meter-area,.theme-c #maker-meter-area{padding:5px 0 4px}
+ .theme-a .maker-profile-part,.theme-c .maker-profile-part{min-height:35px;padding:2px 0}
+ .theme-a .maker-focus-identity{padding-top:3px}
+ .theme-a .maker-focus-identity>img{width:24px;height:32px}
+ .theme-a .maker-reset-seal,.theme-c .maker-reset-seal{min-height:42px;padding-block:4px;margin-top:5px}
+ .theme-a .maker-reset-seal small,.theme-c .maker-reset-seal small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+ .theme-c .maker-timeline li:last-child{display:none}
+ .theme-c .maker-timeline li{padding-block:4px}
+ .theme-c .maker-readings h1{font-size:13px;margin-top:1px}
+ .theme-c .maker-amount strong{font-size:34px}
+ .theme-a .maker-rank summary,.theme-c .maker-rank summary{min-height:30px}
+ .theme-a .maker-usage,.theme-c .maker-usage{min-height:24px;padding-top:4px}
+}
+.maker-reading-status{margin:0}
+.maker-profile-part h2,.maker-authored h3,.maker-profile-part p{margin:0}
+@media(max-height:580px){
+ .theme-a .maker-amount strong{font-size:40px}
+ .theme-a .maker-focus-profile,.theme-c .maker-timeline-profile{margin-top:6px}
+ .theme-a .maker-reset-seal strong,.theme-c .maker-reset-seal strong{font-size:13px;line-height:1.35}
+}
